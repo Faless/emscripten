@@ -2036,7 +2036,7 @@ for (/**@suppress{duplicate}*/var i = 0; i <= {{{ GL_POOL_TEMP_BUFFERS_SIZE }}};
     }
     {{{ makeSetValue('params', '0', 'ret', 'i32') }}};
   },
-  glGetQueryObjectuivEXT: 'glGetQueryObjectivEXT',
+  glGetQueryObjectuivEXT: 'emscripten_glGetQueryObjectivEXT',
 
   glGetQueryObjecti64vEXT__sig: 'viip',
   glGetQueryObjecti64vEXT__deps: ['$writeI53ToI64'],
@@ -2074,7 +2074,7 @@ for (/**@suppress{duplicate}*/var i = 0; i <= {{{ GL_POOL_TEMP_BUFFERS_SIZE }}};
     }
     writeI53ToI64(params, ret);
   },
-  glGetQueryObjectui64vEXT: 'glGetQueryObjecti64vEXT',
+  glGetQueryObjectui64vEXT: 'emscripten_glGetQueryObjecti64vEXT',
 
   glIsBuffer: (buffer) => {
     var b = GL.buffers[buffer];
@@ -3814,10 +3814,10 @@ for (/**@suppress{duplicate}*/var i = 0; i <= {{{ GL_POOL_TEMP_BUFFERS_SIZE }}};
 
   // Open GLES1.1 vao compatibility (Could work w/o -sLEGACY_GL_EMULATION)
 
-  glGenVertexArraysOES: 'glGenVertexArrays',
-  glDeleteVertexArraysOES: 'glDeleteVertexArrays',
-  glBindVertexArrayOES: 'glBindVertexArray',
-  glIsVertexArrayOES: 'glIsVertexArray',
+  glGenVertexArraysOES: 'emscripten_glGenVertexArrays',
+  glDeleteVertexArraysOES: 'emscripten_glDeleteVertexArrays',
+  glBindVertexArrayOES: 'emscripten_glBindVertexArray',
+  glIsVertexArrayOES: 'emscripten_glIsVertexArray',
 
   // GLES2 emulation
 

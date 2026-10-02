@@ -758,7 +758,7 @@ var LibraryWebGL2 = {
   // N.B. This function may only be called if the vertex attribute was specified using the function glVertexAttribI4uiv(),
   // otherwise the results are undefined. (GLES3 spec 6.1.12)
   glGetVertexAttribIuiv__deps: ['$emscriptenWebGLGetVertexAttrib'],
-  glGetVertexAttribIuiv: 'glGetVertexAttribIiv',
+  glGetVertexAttribIuiv: 'emscriptenWebGLGetVertexAttrib',
 
   glUniform1ui__deps: ['$webglGetUniformLocation'],
   glUniform1ui: (location, v0) => {
